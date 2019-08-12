@@ -1,0 +1,36 @@
+{
+	"name": "fcc-stock",
+	"author": "Jaecob Pardo",
+	"version": "0.0.1",
+	"description": "boilerplate",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"chai": "^3.5.0",
+		"chai-http": "^3.0.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"helmet": "^3.20.0",
+		"mocha": "^3.5.3",
+		"mongodb": "^3.2.7",
+		"shortid": "^2.2.14",
+		"zombie": "^5.0.8",
+		"request": "^2.88.0"
+	},
+	"engines": {
+		"node": "10.16.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://hyperdev.com/#!/project/welcome-project"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express"
+	],
+	"license": "MIT"
+}
