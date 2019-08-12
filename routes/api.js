@@ -54,7 +54,9 @@ module.exports = function (app) {
       if(comp.length == 2) {
         data.ipAddr == null ? likesArr.push(0) : likesArr.push(data.ipAddr.length)
         stockData.push({stock: data.stock, price: data.price, rel_likes: likesArr[likesArr.length - 1]})
-        
+        //Very critical here.  With async functions, things don't wait.  There has to be SOME trigger if not utilizing promises that makes it 'wait.'
+        //Here, I'm saying if the stockData object has two objects in it, do some work then return the data.
+        //I think promises are the standard way to do this type of work, but I could not get that working with having to immediately return the data to the user with the assignment requirements.
         if (stockData.length == 2) {
         for (let i = 0; i < likesArr.length; i++) {
           if (i != 0) {

@@ -18,12 +18,15 @@ app.use(cors({origin: '*'})); //For FCC testing purposes only
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-   styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
- }
-}))
+app.use( helmet({
+  csp: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "fonts.googleapis.com"]
+    }
+  },
+  frameguard: false
+}));
 
 
 //Index page (static HTML)
